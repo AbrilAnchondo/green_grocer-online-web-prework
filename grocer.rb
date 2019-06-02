@@ -18,13 +18,12 @@ def apply_coupons(cart, coupons)
   # code here
   coupons.each do |key, value|
    cart.each do |item, details|
-     puts cart
      details.each do |thing, value|
        
         if  coupons.include?(item)
-          new_item = item + "W/COUPON"
-          cart[new_item][:price] = coupons[:cost]
-          cart[new_item][:clearance] = cart[item][:clearance]
+          key = key + "W/COUPON"
+          puts key
+          
         end
      end
     end
