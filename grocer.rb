@@ -21,14 +21,16 @@ def apply_coupons(cart, coupons)
      details.each do |thing, value|
        
         if  coupons.has_value?(item)
-            cart[item + " W/COUPON"] = {}
-            
+            cart << cart[item + " W/COUPON"]
+            cart[item + " W/COUPON"][:clearance] = cart[item][:clearance]
+            :newcount = cart[item][:count] - coupons[:num]  
+            cart[item + " W/COUPON"][:count] = [:newcount]
             
         end
      end
     end
   end
-puts coupons
+cart 
 end
 
 def apply_clearance(cart)
