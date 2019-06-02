@@ -20,7 +20,7 @@ def apply_coupons(cart, coupons)
    cart.each do |item, details|
      details.each do |thing, value|
        
-        if  coupons.include?(item)
+        if  coupons.has_value?(item)
             cart[" W/COUPON"] = {}
             
         end
