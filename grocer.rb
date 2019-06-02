@@ -23,7 +23,7 @@ def apply_coupons(cart, coupons)
         if  coupons.has_value?(item)
             cart << cart[item + " W/COUPON"]
             cart[item + " W/COUPON"][:clearance] = cart[item][:clearance]
-            :newcount = cart[item][:count] - coupons[:num]  
+            [:newcount] = cart[item][:count] - coupons[:num]  
             cart[item + " W/COUPON"][:count] = [:newcount]
             
         end
