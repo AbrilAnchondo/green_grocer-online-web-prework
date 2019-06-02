@@ -20,7 +20,7 @@ def apply_coupons(cart, coupons)
    cart.each do |item, details|
      details.each do |thing, value|
        
-        if  coupons.has_value?(item)
+        if  coupons.include?(item)
           new_item = item + "W/COUPON"
           cart[new_item][:price] = coupons[:cost]
           cart[new_item][:clearance] = cart[item][:clearance]
