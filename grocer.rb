@@ -22,12 +22,13 @@ def apply_coupons(cart, coupons)
        
         if  coupons.has_value?(item)
             cart[item + " W/COUPON"] = {}
+            puts coupons
             
         end
      end
     end
   end
-puts cart
+
 end
 
 def apply_clearance(cart)
