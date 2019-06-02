@@ -21,8 +21,7 @@ def apply_coupons(cart, coupons)
      details.each do |thing, value|
        
         if  coupons.include?(item)
-          key = key + "W/COUPON"
-          puts key
+            cart[item + "W/COUPON"] = {}
           
         end
      end
