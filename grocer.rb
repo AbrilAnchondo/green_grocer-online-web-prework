@@ -18,6 +18,7 @@ def apply_coupons(cart, coupons)
   # code here
   coupons.each do |key, value|
    cart.each do |item, details|
+     puts cart
      details.each do |thing, value|
        
         if  coupons.include?(item)
@@ -28,7 +29,7 @@ def apply_coupons(cart, coupons)
      end
     end
   end
-puts cart
+cart
 end
 
 def apply_clearance(cart)
