@@ -21,7 +21,7 @@ def apply_coupons(cart, coupons)
      details.each do |thing, value|
        
         if  coupons.has_value?(item)
-            cart[" W/COUPON"] = {}
+            cart[item + " W/COUPON"] = {}
             
         end
      end
