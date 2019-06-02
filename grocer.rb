@@ -16,11 +16,11 @@ end
 
 def apply_coupons(cart, coupons)
   # code here
-  coupons.each do |key, value|
+  coupons.each do |product|
    cart.each do |item, details|
      details.each do |thing, value|
        
-        if  coupons.has_value?(item)
+        if  coupons.?(item)
             cart << cart[item + " W/COUPON"]
             cart[item + " W/COUPON"][:clearance] = cart[item][:clearance]
             newcount = cart[item][:count] - coupons[:num]  
